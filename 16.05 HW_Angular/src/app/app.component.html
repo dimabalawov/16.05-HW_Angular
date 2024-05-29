@@ -1,0 +1,45 @@
+
+
+<div class="container">
+<div class="products-div">
+  <div>
+  <form (submit)="applyFilter()">
+    <input type="text" [(ngModel)]="filter" name="filter" placeholder="Filter">
+  
+    <button type="submit">Filter Products</button>
+  </form>
+ </div>
+  <ul>
+    <li *ngFor="let product of filteredProducts">{{ product }}</li>
+  </ul>
+</div>
+</div>
+
+
+<div class="digits-div">
+  <div class="one-block">
+    <h2>Original Array</h2>
+    <ul>
+      <li *ngFor="let digit of digits">{{ digit }}</li>
+    </ul>
+  </div>
+  
+  <div class="one-block">
+    <h2>Sorted Descending</h2>
+    <ul>
+      <li *ngFor="let digit of sortDescending()">{{ digit }}</li>
+    </ul>
+  </div>
+  
+  <div class="one-block">
+    <h2>Sorted Ascending</h2>
+    <ul>
+      <li *ngFor="let digit of sortAscending()">{{ digit }}</li>
+    </ul>
+  </div>
+
+  <div class="one-block">
+    <h2>Max element</h2>
+    <h3 style = "text-align: center;">{{ findMax() }}</h3>
+  </div>
+</div>
